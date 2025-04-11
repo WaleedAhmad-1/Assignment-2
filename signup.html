@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign Up - E-Learning Platform</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .signup-container {
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+
+    .signup-image {
+      background-image: url('signup-pic.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .image-overlay h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .image-overlay p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .benefits {
+      margin-top: 2rem;
+    }
+
+    .benefits p {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    .signup-form-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 2rem;
+    }
+
+    .signup-card {
+      width: 100%;
+      max-width: 450px;
+      padding: 2px;
+      background: white;
+      border-radius: 8px;
+    }
+
+    .signup-header h2 {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .signup-header p {
+      color: #6c757d;
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .password-requirements {
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.25rem;
+    }
+
+    .password-requirements li {
+      margin-bottom: 0.3rem;
+      font-size: 0.85rem;
+      color: #6c757d;
+    }
+
+    .btn-primary {
+      background-color: #3f51b5;
+      border-color: #3f51b5;
+      padding: 0.75rem;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background-color: #303f9f;
+      border-color: #303f9f;
+    }
+
+    .form-check {
+      margin-bottom: 1.5rem;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+      color: #6c757d;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #dee2e6;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 992px) {
+      .signup-image {
+        height: 300px;
+      }
+
+      .signup-form-container {
+        height: auto;
+        padding: 2rem 1rem;
+      }
+
+      .signup-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Slide-In Animation */
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px); /* Start off-screen to the left */
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0); /* End at the normal position */
+      }
+    }
+
+    .image-overlay h1,
+    .image-overlay p,
+    .image-overlay .benefits {
+      opacity: 0; /* Initially hidden */
+      animation: slideInLeft 1s ease-in-out forwards; /* Apply the animation */
+    }
+
+    .image-overlay h1 {
+      animation-delay: 0.5s; /* Delay for the title */
+    }
+
+    .image-overlay p {
+      animation-delay: 1s; /* Delay for the description */
+    }
+
+    .image-overlay .benefits {
+      animation-delay: 1.5s; /* Delay for the benefits list */
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid signup-container">
+    <div class="row g-0">
+      <!-- Left Side - Image -->
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="signup-image">
+          <div class="image-overlay">
+            <h1>Start Your Learning Journey</h1>
+            <p>Join our community at a minimum of minutes and unlock your potential.</p>
+            <div class="benefits">
+              <p><strong>Access to 1000 courses</strong></p>
+              <p>Learn at your own pace</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Form -->
+      <div class="col-lg-6">
+        <div class="signup-form-container">
+          <div class="signup-card">
+            <div class="signup-header text-center">
+              <h2>Create an Account</h2>
+              <p>Begin your educational journey with us</p>
+            </div>
+
+            <form id="signupForm">
+              <!-- Full Name -->
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Create a password">
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="mb-4">
+                <label for="confirmPassword" class="form-label">Re-Type Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+              </div>
+
+              <!-- Newsletter -->
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="newsletter">
+                <label class="form-check-label" for="newsletter">
+                  Receive course recommendations and learning tips
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary w-100">Start Learning Now</button>
+
+              <!-- Divider -->
+              <div class="divider">
+                <span>Or</span>
+              </div>
+
+              <!-- Social Buttons -->
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-outline-secondary flex-grow-1">
+                  <i class="bi bi-google"></i> Google
+                </button>
+                <button type="button" class="btn btn-outline-secondary flex-grow-1">
+                  <i class="bi bi-microsoft"></i> Microsoft
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // Handle form submission
+      $('#signupForm').submit(function (e) {
+        e.preventDefault();
+        // Form validation would go here
+        alert('Account created successfully!');
+        window.location.href = "index.html";
+      });
+
+      // Add hover effect to the overlay text
+      $('.image-overlay').hover(
+        function () {
+          $(this).find('h1').css('color', '#ff6f61'); // Change color on hover
+        },
+        function () {
+          $(this).find('h1').css('color', 'white'); // Revert color
+        }
+      );
+    });
+  </script>
+</body>
+</html>

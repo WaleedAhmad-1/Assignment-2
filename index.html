@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>E-Learning Platform</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Brand/Logo -->
+      <a class="navbar-brand" href="#">E-Learning</a>
+
+      <!-- Toggle Button for Small Screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#explorecourses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <!--li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li-->
+          <li class="nav-item"><a class="nav-link" href="AboutUS.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <!-- Search Bar -->
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search Courses" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Below Header -->
+  <!-- Hero Section -->
+  <section id="hero" class="hero py-5">
+  <div class="container text-center">
+    <!-- Title -->
+    <h1 class="display-4 text-white fw-bold hero-title">Welcome to E-Learning</h1>
+    <!-- Subtitle -->
+    <p class="lead text-white mb-4 hero-subtitle">Unlock your potential with our expert-led courses.</p>
+    <!-- Call-to-Action Button -->
+    <a href="#explorecourses" class="btn btn-primary btn-lg hero-button">Explore Courses</a>
+  </div>
+</section>
+
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Key Features</h2>
+    <div class="row">
+      <!-- Feature 1 -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 border-0 shadow-sm">
+          <div class="mb-3">
+            <span class="badge bg-primary fs-4">📚</span> <!-- Emoji as an icon -->
+          </div>
+          <h5 class="card-title">Expert-Led Courses</h5>
+          <p class="card-text">Learn from industry experts with hands-on projects and real-world examples.</p>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 border-0 shadow-sm">
+          <div class="mb-3">
+            <span class="badge bg-success fs-4">🌐</span> <!-- Emoji as an icon -->
+          </div>
+          <h5 class="card-title">Learn Anywhere</h5>
+          <p class="card-text">Access courses from anywhere, anytime, on any device.</p>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-md-4">
+        <div class="card text-center p-4 border-0 shadow-sm">
+          <div class="mb-3">
+            <span class="badge bg-danger fs-4">🏆</span> <!-- Emoji as an icon -->
+          </div>
+          <h5 class="card-title">Certification</h5>
+          <p class="card-text">Earn certificates upon course completion to showcase your skills.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+
+ <!-- Courses Section -->
+ <section id="explorecourses" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Explore Our Courses</h2>
+    <div class="row" id="courseList">
+      <!-- Courses will be dynamically loaded here via AJAX -->
+    </div>
+  </div>
+</section>
+  
+
+<!-- Chat Box -->
+<div id="chatBox" class="position-fixed bottom-0 end-0 mb-3">
+    <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#chatCanvas">Chat with Us</button>
+  </div>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="chatCanvas" aria-labelledby="chatCanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="chatCanvasLabel">Chat Support</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>How can we assist you today?</p>
+      <textarea class="form-control mb-3" rows="3" placeholder="Type your message..."></textarea>
+      <button class="btn btn-outline-primary w-20">Send</button>
+    </div>
+  </div>
+
+ <!-- Footer Section -->
+<footer id="footer" class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Copyright Info -->
+        <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0 order-1 order-md-1">
+          <p>&copy; 2025 E-Learning Platform. All rights reserved.</p>
+        </div>
+  
+        <!-- Social Media Links -->
+        <div class="col-12 col-md-4 text-center mb-3 mb-md-0 order-3 order-md-2">
+          <a href="#" class="text-white me-3"><img src="facebook.png" alt="Facebook" width="20"> </a>
+          <a href="#" class="text-white me-3"><img src="instagram.png" alt="Instagram" width="20"></a>
+          <a href="#" class="text-white me-3"><img src="twitter.png" alt="Twitter" width="20"></a>
+          <a href="#" class="text-white"><img src="linkedin.png" alt="LinkedIn" width="20"></a>
+        </div>
+  
+        <!-- Contact Details -->
+        <div class="col-12 col-md-4 text-center text-md-end mb-3 mb-md-0 order-2 order-md-3">
+          <p>Contact us at: <a href="contact.html" class="text-white">support@elearning.com</a></p>
+          <p>Feedback? <a href="feedback.html" class="text-blue">Submit Here</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

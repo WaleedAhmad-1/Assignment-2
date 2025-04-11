@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="bootstrap.min.css">
+ <link rel="stylesheet" href="bootstrap-icons.css">
+ <!-- Custom CSS -->
+ <link rel="stylesheet" href="styles.css">
+ <script src="bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Feedback/Reviews Form Section -->
+    <section id="feedback" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Submit Your Feedback</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="feedbackForm" class="p-4 border rounded shadow-sm" novalidate>
+                        <!-- Name Field -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                            <div class="invalid-feedback" id="nameError">Name is required.</div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="invalid-feedback" id="emailError">Valid email is required.</div>
+                        </div>
+                        <!-- Feedback Message Field -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Feedback</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+                            <div class="invalid-feedback" id="messageError">Feedback message is required.</div>
+                        </div>
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Optional: Add your custom JavaScript for form validation -->
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            this.classList.add('was-validated');
+        }, false);
+    </script>
+</body>
+</html>

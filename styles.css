@@ -1,0 +1,163 @@
+/* General Styling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.form-control {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.btn-outline-primary {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('main-back2.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-title,
+.hero-subtitle,
+.hero-button {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-title.show,
+.hero-subtitle.show,
+.hero-button.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#features {
+  background-color: #f8f9fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#features .card {
+  transition: transform 0.3s ease;
+}
+
+#features .card:hover {
+  transform: translateY(-10px);
+}
+
+#features .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#features .card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+#features .badge {
+  font-size: 2rem;
+  padding: 10px;
+}
+
+#feedback {
+  background-color: #f8f9fa;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#feedback form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#feedback .form-control {
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+#feedback .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+}
+
+#feedback button {
+  font-size: 1.1rem;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+#feedback button:hover {
+  transform: scale(1.05);
+}
+
+#chatBox .btn {
+  border-radius: 100px;
+}
+
+#footer {
+  margin-top: 50px;
+}
+
+#footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+#footer a {
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #0d6efd;
+}
+
+@media (max-width: 768px) {
+  #footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #footer .col-12 {
+    margin-bottom: 15px;
+  }
+}
